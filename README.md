@@ -39,7 +39,7 @@ pip install -r requirements.txt
 ```
 
 ### 3. Configure Environment Variables
-Create a `.env` file in the root directory of the project with the following variables:
+Edit the `.env` file in the root directory of the project with the following variables:
 ```env
 SMTP_SERVER=smtp.example.com
 SMTP_PORT=587
@@ -47,6 +47,7 @@ EMAIL_ADDRESS=your_email@example.com
 EMAIL_PASSWORD=your_password
 EMAIL_SUBJECT="Your Email Subject"
 ```
+* Ensure that you do not publish your .env to your public repository!
 
 ### 4. Prepare the CSV File
 To send emails to multiple recipients, you need to create a CSV file (`testList.csv`) with two columns: `fullName` and `email`. The `fullName` column contains the full names of your recipients, and the email column contains their respective email addresses.
