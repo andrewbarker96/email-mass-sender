@@ -19,7 +19,7 @@ recipient_data = pd.read_csv('recipientList.csv') # csv file uses "fullName", "e
 cc = list(pd.read_csv('ccList.csv')['email'])  # List of CC recipients
 cc_string = ', '.join(cc)  # Convert list to comma-separated string for the 'Cc' field
 
-subject = "St. Louis Chilrdren's Hospital and KVC Missouri Mental Wellness Campus"
+subject = os.getenv('EMAIL_SUBJECT')
 body = open('body.html').read()
 
 def sendMassEmail(subject, body, recipient_data):
